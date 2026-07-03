@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business MRI™ — Khám tổng thể doanh nghiệp | Legacy One Group</title>
+<meta name="description" content="Business MRI™ của Legacy One Group: một buổi chẩn đoán tổng thể giúp chủ doanh nghiệp nhìn rõ điểm nghẽn thật sự — từ dòng tiền, mô hình kinh doanh đến quản trị và chuyển giao thế hệ.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B2545;
+    --navy-2:#0d2c54;
+    --gold:#C99A4B;
+    --gold-antique:#A87C33;
+    --teal:#2B8A8A;
+    --ivory:#F4F5F7;
+    --graphite:#222222;
+    --white:#ffffff;
+    --maxw:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,Arial,sans-serif;
+    color:var(--graphite);
+    background:var(--white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.h{font-family:'Public Sans',system-ui,Arial,sans-serif;line-height:1.18;color:var(--navy)}
+  h1{font-weight:800}
+  h2{font-weight:700}
+  h3{font-weight:600}
+  .quote{font-family:'Merriweather',Georgia,serif;font-style:italic}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .gold-rule{width:64px;height:3px;background:var(--gold);border:0;margin:0 0 22px}
+  .eyebrow{font-family:'Public Sans',sans-serif;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px;color:var(--gold-antique)}
+  .btn{
+    display:inline-block;font-family:'Public Sans',sans-serif;font-weight:700;
+    background:var(--gold);color:var(--navy);padding:15px 30px;border-radius:4px;
+    letter-spacing:.02em;transition:transform .15s ease,box-shadow .15s ease;cursor:pointer;border:0;font-size:16px;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(11,37,69,.28)}
+  .btn-ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.5)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(11,37,69,.96);backdrop-filter:blur(6px);border-bottom:1px solid rgba(201,154,75,.35)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img{height:38px;width:auto;display:block}
+  .brand .bt{color:#fff;font-family:'Public Sans',sans-serif;font-weight:700;letter-spacing:.14em;font-size:14px}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:rgba(255,255,255,.82);font-size:15px;font-weight:500}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-cta{background:var(--gold);color:var(--navy);padding:9px 18px;border-radius:4px;font-family:'Public Sans',sans-serif;font-weight:700;font-size:14px}
+  .nav-cta:hover{color:var(--navy)}
+  .menu-toggle{display:none}
+
+  /* HERO */
+  .hero{position:relative;background:
+      radial-gradient(1200px 500px at 80% -10%, rgba(201,154,75,.14), transparent 60%),
+      linear-gradient(180deg,#0B2545 0%, #0a2140 100%);
+    color:#fff;overflow:hidden}
+  .hero:after{content:"";position:absolute;right:-120px;bottom:-120px;width:520px;height:520px;
+    background:url('assets/watermark_gold.png') no-repeat center/contain;opacity:.06;pointer-events:none}
+  .hero .wrap{position:relative;z-index:2;padding:88px 24px 96px}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .hero h1{color:#fff;font-size:52px;letter-spacing:-.5px}
+  .hero h1 .accent{color:var(--gold)}
+  .hero .lead{font-size:19px;color:rgba(255,255,255,.86);margin:22px 0 34px;max-width:560px}
+  .hero .cta-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  .hero .microtrust{margin-top:26px;font-size:14px;color:rgba(255,255,255,.6)}
+  .hero-card{background:rgba(255,255,255,.05);border:1px solid rgba(201,154,75,.4);border-radius:12px;padding:30px}
+  .hero-card h3{color:var(--gold);font-size:15px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+  .hero-card ul{list-style:none}
+  .hero-card li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.09);color:rgba(255,255,255,.9);font-size:15.5px}
+  .hero-card li:last-child{border-bottom:0}
+  .hero-card li b{color:var(--gold);font-family:'Public Sans',sans-serif}
+
+  /* SECTION base */
+  section{padding:84px 0}
+  .section-head{max-width:720px;margin-bottom:48px}
+  .section-head h2{font-size:36px}
+  .section-head p{font-size:18px;color:#4a5568;margin-top:14px}
+  .bg-ivory{background:var(--ivory)}
+  .bg-navy{background:var(--navy);color:#fff}
+  .bg-navy h2,.bg-navy h3{color:#fff}
+
+  /* PAIN — 3 stages */
+  .stages{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .stage{background:#fff;border-radius:12px;padding:32px 28px;border:1px solid #e7e9ee;border-top:4px solid var(--gold);box-shadow:0 6px 20px rgba(11,37,69,.05)}
+  .stage .num{font-family:'Public Sans',sans-serif;font-weight:800;font-size:14px;color:var(--gold-antique);letter-spacing:.12em}
+  .stage h3{font-size:21px;margin:10px 0 12px}
+  .stage .say{font-family:'Merriweather',Georgia,serif;font-style:italic;color:var(--navy);font-size:17px;margin-bottom:14px}
+  .stage p{color:#586074;font-size:15.5px}
+
+  /* MARKET fragmentation */
+  .frag{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .frag-table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 6px 20px rgba(11,37,69,.06)}
+  .frag-table td{padding:14px 20px;border-bottom:1px solid #eceef2;font-size:15.5px}
+  .frag-table tr:last-child td{border-bottom:0}
+  .frag-table td:first-child{font-weight:600;color:var(--navy);width:45%}
+  .frag-table td:last-child{color:#6b7280}
+  .frag-table tr.gap td:last-child{color:var(--gold-antique);font-weight:600}
+
+  /* MRI scope grid */
+  .scope{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .scope-item{background:rgba(255,255,255,.04);border:1px solid rgba(201,154,75,.3);border-radius:12px;padding:26px}
+  .scope-item .ic{width:44px;height:44px;border-radius:9px;background:rgba(201,154,75,.15);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .scope-item .ic svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.7}
+  .scope-item h3{font-size:18px;margin-bottom:8px;color:#fff}
+  .scope-item p{color:rgba(255,255,255,.72);font-size:14.5px}
+
+  /* PROCESS */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}
+  .step{position:relative;padding:28px 22px;background:#fff;border-radius:12px;border:1px solid #e7e9ee}
+  .step .n{width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--gold);font-family:'Public Sans',sans-serif;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:16px}
+  .step h3{font-size:18px;margin-bottom:8px}
+  .step p{font-size:14.5px;color:#586074}
+
+  /* DELIVERABLE */
+  .deliver{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+  .report-card{background:#fff;border-radius:14px;padding:34px;box-shadow:0 14px 40px rgba(11,37,69,.12);border:1px solid #e7e9ee;position:relative}
+  .report-card .tag{position:absolute;top:-14px;left:34px;background:var(--gold);color:var(--navy);font-family:'Public Sans',sans-serif;font-weight:700;font-size:13px;padding:6px 14px;border-radius:4px;letter-spacing:.04em}
+  .report-card h3{font-size:22px;margin:8px 0 18px}
+  .report-list{list-style:none}
+  .report-list li{display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed #e4e7ec;font-size:15.5px;color:#404756}
+  .report-list li:last-child{border-bottom:0}
+  .check{flex:0 0 22px;height:22px;border-radius:50%;background:rgba(43,138,138,.12);display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .check svg{width:13px;height:13px;stroke:var(--teal);stroke-width:2.4;fill:none}
+  .deliver .txt h2{font-size:34px}
+  .deliver .txt p{font-size:17px;color:#4a5568;margin-top:16px}
+
+  /* WHY L1G */
+  .why{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+  .why-item{padding:28px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1)}
+  .why-item h3{font-size:19px;color:var(--gold);margin-bottom:10px}
+  .why-item p{color:rgba(255,255,255,.8);font-size:15.5px}
+  .pillars{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .pillars span{font-size:13.5px;font-family:'Public Sans',sans-serif;font-weight:600;color:var(--navy);background:var(--gold);padding:6px 14px;border-radius:40px}
+
+  /* CTA / FORM */
+  .cta-sec{background:
+      radial-gradient(900px 400px at 15% 0%, rgba(201,154,75,.16), transparent 60%),
+      linear-gradient(180deg,#0a2140,#0B2545);color:#fff}
+  .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .cta-copy h2{font-size:38px;color:#fff}
+  .cta-copy .quote{color:var(--gold);font-size:21px;margin:20px 0;display:block;line-height:1.5}
+  .cta-copy ul{list-style:none;margin-top:22px}
+  .cta-copy li{display:flex;gap:12px;padding:9px 0;color:rgba(255,255,255,.86);font-size:15.5px}
+  .cta-copy li svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:2;flex:0 0 20px;margin-top:2px}
+  form{background:#fff;border-radius:14px;padding:34px;box-shadow:0 18px 50px rgba(0,0,0,.28)}
+  form h3{color:var(--navy);font-size:22px;margin-bottom:6px}
+  form .sub{color:#6b7280;font-size:14.5px;margin-bottom:22px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:13.5px;font-weight:600;color:var(--navy);margin-bottom:6px;font-family:'Public Sans',sans-serif}
+  .field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid #d5d9e0;border-radius:7px;font-family:inherit;font-size:15px;color:var(--graphite);background:#fff;transition:border-color .15s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,154,75,.15)}
+  .field textarea{min-height:82px;resize:vertical}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  form .btn{width:100%;margin-top:6px}
+  .form-note{font-size:12.5px;color:#9098a5;margin-top:14px;text-align:center}
+  .form-success{display:none;background:rgba(43,138,138,.1);border:1px solid var(--teal);color:#1f6b6b;padding:14px 16px;border-radius:8px;font-size:15px;margin-bottom:18px}
+  .form-error{display:none;background:rgba(168,124,51,.1);border:1px solid var(--gold-antique);color:#8a5f1f;padding:14px 16px;border-radius:8px;font-size:15px;margin-bottom:18px}
+  .btn[disabled]{opacity:.6;cursor:progress}
+
+  /* FOOTER */
+  footer{background:#081b34;color:rgba(255,255,255,.7);padding:52px 0 34px}
+  .foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1)}
+  footer .brand img{height:42px}
+  footer p{font-size:14.5px;margin-top:14px;max-width:320px}
+  footer h4{color:#fff;font-family:'Public Sans',sans-serif;font-size:14px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+  footer ul{list-style:none}
+  footer li{padding:5px 0;font-size:14.5px}
+  footer a:hover{color:var(--gold)}
+  .foot-bottom{padding-top:22px;font-size:13px;color:rgba(255,255,255,.5);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .foot-bottom .tag{color:var(--gold);font-family:'Merriweather',serif;font-style:italic}
+
+  @media(max-width:900px){
+    .hero-grid,.frag,.deliver,.cta-grid{grid-template-columns:1fr}
+    .scope,.stages{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .why{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .hero h1{font-size:40px}
+    .nav-links{display:none}
+    .nav-links.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--navy);padding:18px 24px;gap:16px;border-bottom:1px solid rgba(201,154,75,.35)}
+    .menu-toggle{display:block;background:none;border:0;cursor:pointer}
+    .menu-toggle svg{width:28px;height:28px;stroke:#fff;stroke-width:2;fill:none}
+  }
+  @media(max-width:560px){
+    .scope,.stages,.steps,.row2,.foot-grid{grid-template-columns:1fr}
+    .hero h1{font-size:33px}
+    section{padding:60px 0}
+    .hero .wrap{padding:60px 24px 68px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <img src="assets/logo_white.png" alt="Legacy One Group">
+      <span class="bt">LEGACY ONE GROUP</span>
+    </a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#van-de">Vấn đề</a>
+      <a href="#mri">Business MRI</a>
+      <a href="#quy-trinh">Quy trình</a>
+      <a href="#bao-cao">Đầu ra</a>
+      <a href="#vi-sao">Vì sao L1G</a>
+      <a class="nav-cta" href="#dat-lich">Đặt lịch Business MRI</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">
+      <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow" style="color:var(--gold)">Business Diagnosis Center · Legacy One Group</div>
+        <h1 style="margin-top:16px">Doanh nghiệp của anh đã đủ mạnh để tăng trưởng.<br><span class="accent">Nó có đủ bài bản để trường tồn không?</span></h1>
+        <p class="lead">Business MRI™ là một buổi <b>khám tổng thể doanh nghiệp</b> — giúp chủ doanh nghiệp nhìn rõ điểm nghẽn thật sự đang kìm hãm mình, thay vì chữa từng triệu chứng rời rạc.</p>
+        <div class="cta-row">
+          <a class="btn" href="#dat-lich">Đặt lịch Business MRI</a>
+          <a class="btn btn-ghost" href="#mri">Business MRI khám những gì?</a>
+        </div>
+        <p class="microtrust">Dành cho founder 45–70 tuổi · doanh thu 20–500 tỷ · đang lo bài toán phụ thuộc founder &amp; chuyển giao thế hệ.</p>
+      </div>
+      <div class="hero-card">
+        <h3>Một buổi chẩn đoán — 6 lát cắt</h3>
+        <ul>
+          <li><b>01</b> Điểm nghẽn hệ thống (TOC)</li>
+          <li><b>02</b> Dòng tiền &amp; sức khỏe tài chính</li>
+          <li><b>03</b> Mô hình kinh doanh</li>
+          <li><b>04</b> Marketing &amp; thị trường</li>
+          <li><b>05</b> Nhân sự &amp; đội ngũ kế cận</li>
+          <li><b>06</b> Quản trị &amp; cấu trúc sở hữu</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN 3 STAGES -->
+<section id="van-de">
+  <div class="wrap">
+    <div class="section-head">
+      <hr class="gold-rule">
+      <div class="eyebrow">Nỗi đau của người chủ</div>
+      <h2>Ba câu hỏi mà hầu hết chủ doanh nghiệp đều đến lúc phải đối mặt</h2>
+      <p>Doanh nghiệp 10–20 năm tuổi, founder 50–65, doanh thu vài chục đến vài trăm tỷ — thường mắc cùng một nhóm bài toán, chỉ khác giai đoạn.</p>
+    </div>
+    <div class="stages">
+      <div class="stage">
+        <div class="num">GIAI ĐOẠN 1</div>
+        <h3>Phụ thuộc founder</h3>
+        <div class="say">"Tôi làm mãi mà doanh nghiệp vẫn phụ thuộc vào tôi."</div>
+        <p>Mọi quyết định đổ về một người. Founder không thể rời khỏi vận hành dù chỉ một tuần mà không lo lắng.</p>
+      </div>
+      <div class="stage">
+        <div class="num">GIAI ĐOẠN 2</div>
+        <h3>Có tài sản, chưa có hệ thống</h3>
+        <div class="say">"Tôi có tài sản nhưng chưa có hệ thống."</div>
+        <p>Cổ phần lộn xộn, chưa có HĐQT, chưa có CEO kế cận, con cái chưa sẵn sàng. Giá trị nằm ở người, chưa nằm ở cấu trúc.</p>
+      </div>
+      <div class="stage">
+        <div class="num">GIAI ĐOẠN 3</div>
+        <h3>Bài toán di sản</h3>
+        <div class="say">"Nếu ngày mai tôi nghỉ thì chuyện gì xảy ra?"</div>
+        <p>Đây mới là bài toán Legacy — chuyển giao thế hệ. Và rất ít đơn vị tại Việt Nam đang thật sự giải quyết nó.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET FRAGMENTATION -->
+<section class="bg-ivory">
+  <div class="wrap">
+    <div class="frag">
+      <div>
+        <hr class="gold-rule">
+        <div class="eyebrow">Vì sao "khám tổng thể" lại quan trọng</div>
+        <h2 style="font-size:33px;margin-top:6px">Chủ doanh nghiệp gặp mọi vấn đề <em>cùng một lúc</em> — nhưng thị trường lại chia cắt.</h2>
+        <p style="font-size:17px;color:#4a5568;margin-top:16px">Mỗi chuyên gia chỉ nhìn một mảnh. Không ai đứng ở vị trí bác sĩ tổng quát để nói cho anh biết: <b>điểm nghẽn thật sự đang nằm ở đâu</b>, và nên chữa gì trước.</p>
+        <p style="font-size:17px;color:var(--navy);margin-top:16px;font-family:'Merriweather',serif;font-style:italic">Business MRI™ chính là buổi khám tổng quát đó.</p>
+      </div>
+      <div>
+        <table class="frag-table">
+          <tr><td>Vấn đề</td><td>Ai đang giải quyết</td></tr>
+          <tr><td>Pháp lý</td><td>Luật sư</td></tr>
+          <tr><td>Thuế</td><td>Kế toán</td></tr>
+          <tr><td>Chiến lược</td><td>Consultant</td></tr>
+          <tr><td>Marketing</td><td>Agency</td></tr>
+          <tr><td>Đầu tư</td><td>Công ty chứng khoán</td></tr>
+          <tr class="gap"><td>Chuyển giao thế hệ</td><td>Gần như bỏ trống</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MRI SCOPE -->
+<section class="bg-navy" id="mri">
+  <div class="wrap">
+    <div class="section-head">
+      <hr class="gold-rule">
+      <div class="eyebrow" style="color:var(--gold)">Sản phẩm đầu phễu</div>
+      <h2>Business MRI™ — khám tổng thể doanh nghiệp trên 6 lát cắt</h2>
+      <p style="color:rgba(255,255,255,.8)">Không phải một buổi tư vấn cảm tính. Đây là một quy trình chẩn đoán có cấu trúc, soi doanh nghiệp qua sáu góc nhìn then chốt để định vị đúng điểm nghẽn cần xử lý trước.</p>
+    </div>
+    <div class="scope">
+      <div class="scope-item">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 3 4-6"/></svg></div>
+        <h3>Điểm nghẽn hệ thống (TOC)</h3>
+        <p>Xác định ràng buộc cốt lõi đang giới hạn toàn bộ năng lực của doanh nghiệp — theo tư duy Lý thuyết Điểm nghẽn.</p>
+      </div>
+      <div class="scope-item">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Dòng tiền &amp; tài chính</h3>
+        <p>Sức khỏe dòng tiền, cấu trúc chi phí, biên lợi nhuận và những rò rỉ tài chính đang âm thầm bào mòn giá trị.</p>
+      </div>
+      <div class="scope-item">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 18v3M16 18v3"/></svg></div>
+        <h3>Mô hình kinh doanh</h3>
+        <p>Cách doanh nghiệp tạo ra, chuyển giao và giữ lại giá trị — điểm mạnh, điểm dễ tổn thương và dư địa mở rộng.</p>
+      </div>
+      <div class="scope-item">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></div>
+        <h3>Marketing &amp; thị trường</h3>
+        <p>Định vị, kênh khách hàng và khả năng tăng trưởng bền vững thay vì phụ thuộc mối quan hệ cá nhân của founder.</p>
+      </div>
+      <div class="scope-item">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.5a3 3 0 0 1 0 5.6M17.5 20a6.5 6.5 0 0 0-3-5.5"/></svg></div>
+        <h3>Nhân sự &amp; kế cận</h3>
+        <p>Đội ngũ, năng lực lãnh đạo lớp kế tiếp và mức độ sẵn sàng của CEO/HĐQT cho một doanh nghiệp không phụ thuộc founder.</p>
+      </div>
+      <div class="scope-item">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Quản trị &amp; sở hữu</h3>
+        <p>Cấu trúc cổ đông, điều lệ, cơ chế quản trị và mức độ bảo vệ tài sản — nền móng cho chuyển giao thế hệ.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="quy-trinh">
+  <div class="wrap">
+    <div class="section-head">
+      <hr class="gold-rule">
+      <div class="eyebrow">Quy trình</div>
+      <h2>Từ buổi khám đến phác đồ — bốn bước rõ ràng</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h3>Tiếp nhận</h3>
+        <p>Trao đổi ban đầu để hiểu bối cảnh, ngành, quy mô và câu hỏi lớn nhất mà anh đang trăn trở.</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h3>Khám tổng thể</h3>
+        <p>Làm việc trực tiếp cùng chuyên gia L1G, soi doanh nghiệp qua 6 lát cắt bằng bộ khung chẩn đoán chuẩn.</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h3>Báo cáo Health Check</h3>
+        <p>Nhận bản Business Health Check: điểm nghẽn cốt lõi, mức độ ưu tiên và hướng xử lý cụ thể.</p>
+      </div>
+      <div class="step">
+        <div class="n">4</div>
+        <h3>Lộ trình đồng hành</h3>
+        <p>Nếu phù hợp, chuyển sang giai đoạn tái cấu trúc &amp; xây hệ thống — từ tăng trưởng đến trường tồn.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLE -->
+<section class="bg-ivory" id="bao-cao">
+  <div class="wrap">
+    <div class="deliver">
+      <div class="report-card">
+        <span class="tag">ĐẦU RA</span>
+        <h3>Báo cáo Business Health Check</h3>
+        <ul class="report-list">
+          <li><span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span> Bản đồ sức khỏe doanh nghiệp trên 6 lát cắt</li>
+          <li><span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span> Điểm nghẽn cốt lõi (TOC) được gọi tên rõ ràng</li>
+          <li><span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span> Thứ tự ưu tiên: nên xử lý gì trước, gì sau</li>
+          <li><span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span> Rủi ro về quản trị, sở hữu &amp; chuyển giao</li>
+          <li><span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span> Khuyến nghị hướng đi &amp; lộ trình đồng hành</li>
+        </ul>
+      </div>
+      <div class="txt">
+        <hr class="gold-rule">
+        <h2>Anh rời buổi khám với một bức tranh rõ ràng — không phải thêm một danh sách việc phải làm.</h2>
+        <p>Phần lớn chủ doanh nghiệp biết "có gì đó không ổn" nhưng không chắc <em>vấn đề gốc</em> nằm ở đâu. Business Health Check biến cảm giác mơ hồ đó thành một chẩn đoán có cấu trúc, để mọi quyết định tiếp theo đều dựa trên sự thật của chính doanh nghiệp anh.</p>
+        <a class="btn" href="#dat-lich" style="margin-top:26px">Đặt lịch Business MRI</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY L1G -->
+<section class="bg-navy" id="vi-sao">
+  <div class="wrap">
+    <div class="section-head">
+      <hr class="gold-rule">
+      <div class="eyebrow" style="color:var(--gold)">Vì sao Legacy One Group</div>
+      <h2>Chúng tôi không bán dịch vụ — chúng tôi quản lý vòng đời doanh nghiệp</h2>
+      <p style="color:rgba(255,255,255,.8)">L1G là định chế quản lý trọn vòng đời doanh nghiệp gia đình: Xây → Vận hành → Bảo vệ → Chuyển giao. Business MRI™ là cánh cửa đầu tiên.</p>
+    </div>
+    <div class="why">
+      <div class="why-item">
+        <h3>Một góc nhìn tổng thể, không chắp vá</h3>
+        <p>Sở hữu đồng thời 5 năng lực — Chiến lược, Pháp lý, Cộng đồng, Quản trị và Di sản — nên chúng tôi nhìn doanh nghiệp như một chỉnh thể, không phải từng mảnh rời.</p>
+      </div>
+      <div class="why-item">
+        <h3>Đủ chiều sâu để đi cùng anh lâu dài</h3>
+        <p>Business MRI dẫn vào một hệ thống hoàn chỉnh: tái cấu trúc, xây quản trị, bảo vệ tài sản và hoạch định chuyển giao thế hệ — khi anh sẵn sàng.</p>
+      </div>
+      <div class="why-item">
+        <h3>Hiểu đúng tệp doanh nhân Việt</h3>
+        <p>Xây riêng cho chủ doanh nghiệp 45–70 tuổi đang ở ngưỡng chuyển giao — một bài toán mà thị trường tư vấn hiện tại gần như bỏ ngỏ.</p>
+      </div>
+      <div class="why-item">
+        <h3>5 trụ cột của một định chế</h3>
+        <div class="pillars">
+          <span>Business Diagnosis</span><span>Transformation</span><span>Legal &amp; Governance</span><span>Legacy &amp; Family</span><span>Capital &amp; Investment</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / FORM -->
+<section class="cta-sec" id="dat-lich">
+  <div class="wrap">
+    <div class="cta-grid">
+      <div class="cta-copy">
+        <hr class="gold-rule">
+        <h2>Đặt lịch Business MRI™</h2>
+        <span class="quote">"Từ tăng trưởng đến trường tồn."</span>
+        <p style="color:rgba(255,255,255,.85);font-size:17px">Để lại thông tin, đội ngũ Legacy One Group sẽ liên hệ trong vòng 24 giờ làm việc để sắp xếp buổi khám tổng thể cho doanh nghiệp của anh.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg> Trao đổi 1-1 cùng chuyên gia chẩn đoán</li>
+          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg> Bảo mật thông tin doanh nghiệp tuyệt đối</li>
+          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg> Không cam kết ràng buộc sau buổi khám</li>
+        </ul>
+      </div>
+      <form id="mriForm" onsubmit="return submitMRI(event)">
+        <div class="form-success" id="formSuccess">✓ Cảm ơn anh/chị. Thông tin đã được ghi nhận — chúng tôi sẽ liên hệ trong 24 giờ làm việc.</div>
+        <div class="form-error" id="formError">Xin lỗi, gửi chưa thành công. Anh/chị vui lòng thử lại hoặc email trực tiếp về admin@l1g.vn.</div>
+        <h3>Đăng ký khám</h3>
+        <p class="sub">Các trường có dấu * là bắt buộc.</p>
+        <input type="hidden" name="_subject" value="[L1G] Đăng ký Business MRI mới">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_template" value="table">
+        <div class="field">
+          <label for="name">Họ và tên *</label>
+          <input id="name" name="name" type="text" required placeholder="Nguyễn Văn A">
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="company">Tên doanh nghiệp *</label>
+            <input id="company" name="company" type="text" required placeholder="Công ty ...">
+          </div>
+          <div class="field">
+            <label for="role">Vai trò</label>
+            <input id="role" name="role" type="text" placeholder="Founder / Chủ tịch / CEO">
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="phone">Số điện thoại *</label>
+            <input id="phone" name="phone" type="tel" required placeholder="09xx xxx xxx">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="ten@congty.vn">
+          </div>
+        </div>
+        <div class="field">
+          <label for="revenue">Doanh thu / năm</label>
+          <select id="revenue" name="revenue">
+            <option value="">— Chọn khoảng —</option>
+            <option>Dưới 20 tỷ</option>
+            <option>20 – 100 tỷ</option>
+            <option>100 – 300 tỷ</option>
+            <option>300 – 500 tỷ</option>
+            <option>Trên 500 tỷ</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="note">Điểm nghẽn lớn nhất anh/chị đang trăn trở</label>
+          <textarea id="note" name="note" placeholder="Ví dụ: doanh nghiệp phụ thuộc vào tôi, chưa có người kế cận..."></textarea>
+        </div>
+        <button class="btn" type="submit">Gửi &amp; đặt lịch Business MRI</button>
+        <p class="form-note">Bằng việc gửi thông tin, anh/chị đồng ý để Legacy One Group liên hệ tư vấn.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand"><img src="assets/logo_white.png" alt="Legacy One Group"></div>
+        <p>Legacy One Group — Công ty Cổ phần Di Sản Doanh Nhân Việt Nam. Định chế quản lý trọn vòng đời doanh nghiệp gia đình Việt.</p>
+      </div>
+      <div>
+        <h4>Sản phẩm</h4>
+        <ul>
+          <li><a href="#mri">Business MRI™</a></li>
+          <li><a href="#bao-cao">Business Health Check</a></li>
+          <li><a href="#vi-sao">Transformation Office</a></li>
+          <li><a href="#vi-sao">Legacy &amp; Family Business</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <ul>
+          <li><a href="#dat-lich">Đặt lịch Business MRI</a></li>
+          <li><a href="mailto:admin@l1g.vn">admin@l1g.vn</a></li>
+          <li>Website: l1g.vn</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Legacy One Group. Bảo lưu mọi quyền.</span>
+      <span class="tag">Từ tăng trưởng đến trường tồn.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Gửi form về email admin@l1g.vn qua FormSubmit (không cần backend).
+  // Lần gửi ĐẦU TIÊN, FormSubmit sẽ email 1 link kích hoạt về admin@l1g.vn — bấm xác nhận 1 lần là xong.
+  var MRI_ENDPOINT = 'https://formsubmit.co/ajax/admin@l1g.vn';
+  function submitMRI(e){
+    e.preventDefault();
+    var f = e.target;
+    if(!f.checkValidity()){ f.reportValidity(); return false; }
+    var ok = document.getElementById('formSuccess');
+    var err = document.getElementById('formError');
+    var btn = f.querySelector('button[type=submit]');
+    ok.style.display='none'; err.style.display='none';
+    btn.disabled = true; var label = btn.textContent; btn.textContent = 'Đang gửi…';
+
+    fetch(MRI_ENDPOINT, {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify({
+        'Họ và tên': f.name.value,
+        'Doanh nghiệp': f.company.value,
+        'Vai trò': f.role.value,
+        'Số điện thoại': f.phone.value,
+        'Email': f.email.value,
+        'Doanh thu/năm': f.revenue.value,
+        'Điểm nghẽn': f.note.value,
+        '_subject': f._subject.value,
+        '_template': 'table'
+      })
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(res){
+      if(res.success === 'true' || res.success === true){
+        ok.style.display='block';
+        f.querySelectorAll('input,select,textarea').forEach(function(el){ if(el.type!=='hidden') el.value=''; });
+        ok.scrollIntoView({behavior:'smooth',block:'center'});
+      } else { throw new Error('failed'); }
+    })
+    .catch(function(){
+      err.style.display='block';
+      err.scrollIntoView({behavior:'smooth',block:'center'});
+    })
+    .finally(function(){ btn.disabled=false; btn.textContent=label; });
+    return false;
+  }
+  // đóng menu mobile khi chọn link
+  document.querySelectorAll('#navlinks a').forEach(function(a){
+    a.addEventListener('click',function(){document.getElementById('navlinks').classList.remove('open');});
+  });
+</script>
+</body>
+</html>
